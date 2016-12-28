@@ -178,6 +178,7 @@ public class MainViewerGUI extends JFrame implements FileChangeNotifier {
     public final JMenuItem mntmShowMainMethods = new JMenuItem("Show Main Methods");
     public final JMenuItem mntmNewMenuItem_3 = new JMenuItem("Save As Runnable Jar..");
     public final JMenuItem mntmReplaceStrings = new JMenuItem("Replace Strings");
+    public final JMenuItem mntmK4B1stClass = new JMenuItem("K4B 1st classs");
     public final JCheckBoxMenuItem chckbxmntmNewCheckItem_12 = new JCheckBoxMenuItem("Update Check");
     public final JMenuItem mntmNewMenuItem_6 = new JMenuItem("Rename Fields");
     public final JMenuItem mntmNewMenuItem_7 = new JMenuItem("Rename Methods");
@@ -1128,6 +1129,7 @@ public class MainViewerGUI extends JFrame implements FileChangeNotifier {
         });
 
         pluginsMenu.add(mntmZstringarrayDecrypter);
+        pluginsMenu.add(mntmK4B1stClass);
 
         menuBar.add(spinnerMenu);
 
@@ -1179,6 +1181,12 @@ public class MainViewerGUI extends JFrame implements FileChangeNotifier {
             @Override
             public void actionPerformed(ActionEvent e) {
                 PluginManager.runPlugin(new ShowAllStrings());
+            }
+        });
+        mntmK4B1stClass.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                PluginManager.runPlugin(new Kwd4BytecodesFirstClass());
             }
         });
 
