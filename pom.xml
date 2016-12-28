@@ -199,7 +199,7 @@
         <dependency>
             <groupId>org.keywords4bytecodes</groupId>
             <artifactId>firstclass</artifactId>
-			<version>0.0.3-SNAPSHOT</version>
+			<version>0.0.4-SNAPSHOT</version>
         </dependency>
     </dependencies>    
 </project>
